@@ -88,6 +88,14 @@ snippet imp "Import"
 @import '${1}'$0
 endsnippet
 
+snippet kf "Keyframes"
+@keyframes ${1:animationName}
+	${2:from}
+		$3
+	${4:to}
+		$5
+endsnippet
+
 snippet lc "Last Child"
 &:last-child
 	${0}
