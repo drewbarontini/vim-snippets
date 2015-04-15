@@ -1,0 +1,50 @@
+snippet icb "Inline Callback"
+if ${1:_settings}.on${2:Callback} != null {
+	$1.on$2( $1 );
+}
+endsnippet
+
+snippet mod "Module"
+var ${1:ModuleName} = (function() {
+	# -------------------------------------
+	#   Private Variables
+	# -------------------------------------
+
+	var _settings = {};
+
+	# -------------------------------------
+	#   Initialize
+	# -------------------------------------
+
+	var init = function( options ) {
+		_settings = $.extend({
+			$${2:element} : $3
+		}, options );
+
+		_setEventHandlers();
+	};
+
+	# -------------------------------------
+	#   Set Event Handlers
+	# -------------------------------------
+
+	var _setEventHandlers = function() {
+		# ...
+	}
+
+	# -------------------------------------
+	#   Public Methods
+	# -------------------------------------
+
+	return {
+		init : init
+	};
+
+# -------------------------------------
+#   Usage
+# -------------------------------------
+#
+# $1.init()
+#
+})();
+endsnippet
