@@ -12,8 +12,8 @@ snippet bfun "Function (bound)" i
 `!p snip.rv = "( " if t[1] else ""`${1:args}`!p snip.rv = " ) " if t[1] else ""`=>`!p snip.rv = " " if t[2] and not t[2].startswith("\n") else ""`${2:expr}
 endsnippet
 
-snippet bug "Debugger" b
-debugger
+snippet cl "console.log" b
+console.log ${1:'$2'}$0
 endsnippet
 
 snippet cla "Class" b
@@ -30,6 +30,10 @@ endsnippet
 
 snippet cte "console.timeEnd"
 console.timeEnd '${0:string}'
+endsnippet
+
+snippet db "Debugger" b
+debugger
 endsnippet
 
 snippet elif "Else if" b
@@ -62,24 +66,20 @@ ${1:name} = `!p snip.rv = "( " if t[2] else ""`${2:args}`!p snip.rv = " ) " if t
 	${0:# body...}
 endsnippet
 
-snippet if "If" b
+snippet if "If Statement" b
 if ${1:condition}
 	${0:# body...}
 endsnippet
 
-snippet ife "If .. Else" b
+snippet ife "If/Else Statement" b
 if ${1:condition}
 	${2:# body...}
 else
 	${3:# body...}
 endsnippet
 
-snippet ifte "Ternary if" b
+snippet ift "Ternary Statement" b
 if ${1:condition} then ${2:value} else ${3:other}
-endsnippet
-
-snippet log "console.log" b
-console.log ${1:'$2'}$0
 endsnippet
 
 snippet met "Method" b
@@ -101,7 +101,7 @@ snippet sti "setTimeout Inline"
 setTimeout( -> $1, $2 )
 endsnippet
 
-snippet swi "Switch" b
+snippet sw "Switch" b
 switch ${1:object}
 	when ${2:value}
 		${3:# body...}
@@ -109,7 +109,7 @@ switch ${1:object}
 		$0
 endsnippet
 
-snippet swit "Switch when .. then" b
+snippet swi "Switch when .. then" b
 switch ${1:object}
 	when ${2:condition}`!p snip.rv = " then " if t[3] else ""`${3:value}
 	else`!p snip.rv = " " if t[4] and not t[4].startswith("\n") else ""`${4:value}
