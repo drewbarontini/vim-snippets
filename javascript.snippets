@@ -40,6 +40,12 @@ snippet ift "Ternary Statement" b
 ${1:condition} ? ${2:value} : ${3:other}
 endsnippet
 
+snippet iife "Immediately-invoked Function Expression" b
+(function() {
+	${1:// ...}
+})();$0
+endsnippet
+
 snippet st "setTimeout"
 setTimeout( function() {
 	${1:// ...}
