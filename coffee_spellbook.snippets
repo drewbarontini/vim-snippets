@@ -1,5 +1,17 @@
-snippet cla "Class"
-class ${1:@ModuleName}
+snippet class "Class"
+# *************************************
+#
+#   ${1:Class Name}
+#   -> ${2:Description}
+#
+# *************************************
+#
+# @param $element  { jQuery object }
+# @param className { string }
+#
+# *************************************
+
+class @Spellbook.Classes.${1:ClassName}
 
 	# -------------------------------------
 	#   Private Variables
@@ -35,7 +47,30 @@ class ${1:@ModuleName}
 #   Usage
 # -------------------------------------
 #
-# new $1()
+# new Spellbook.Classes.$1()
+#
+endsnippet
+
+snippet helper "Helper"
+# *************************************
+#
+#   ${1:Helper Name}
+#   -> ${2:Description}
+#
+# *************************************
+#
+# @param item { string }
+#
+# *************************************
+
+@Spellbook.Helpers.${3:helperName} = ( item ) ->
+  ${4:# ...}
+
+# -------------------------------------
+#   Usage
+# -------------------------------------
+#
+# Spellbook.Helpers.$3()
 #
 endsnippet
 
@@ -43,8 +78,19 @@ snippet icb "Inline Callback"
 ${1:_settings}.on${2:Callback}( $1 ) if $1.on$2?$0
 endsnippet
 
-snippet mod "Module"
-${1:@ModuleName} = do ->
+snippet module "Module"
+# *************************************
+#
+#   ${1:Module Name}
+#   -> ${2:Description}
+#
+# *************************************
+#
+# @param $element { jQuery object }
+#
+# *************************************
+
+@Spellbook.Modules.${1:ModuleName} = do ->
 
 	# -------------------------------------
 	#   Private Variables
@@ -80,6 +126,34 @@ ${1:@ModuleName} = do ->
 #   Usage
 # -------------------------------------
 #
-# $1.init()
+# Spellbook.Modules.$1.init()
+#
+endsnippet
+
+snippet service "Service"
+# *************************************
+#
+#   ${1:Service Name}
+#   -> ${2:Description}
+#
+# *************************************
+#
+# @param $element { jQuery object }
+#
+# *************************************
+
+@Spellbook.Services.${3:serviceName} = ( options ) ->
+  settings = $.extend
+    $element: $( '.js-element' )
+  , options
+
+  ${4:# ...}
+
+# -------------------------------------
+#   Usage
+# -------------------------------------
+#
+# Spellbook.Services.$3()
+#   # ...
 #
 endsnippet
