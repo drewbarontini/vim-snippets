@@ -4,8 +4,20 @@ if ${1:_settings}.on${2:Callback} != null {
 }
 endsnippet
 
-snippet mod "Module"
-var ${1:ModuleName} = (function() {
+snippet module "Module"
+// *************************************
+//
+//   ${1:Module Name}
+//   -> ${2:Description}
+//
+// *************************************
+//
+// @param $element  { jQuery object }
+// @param className { string }
+//
+// *************************************
+
+var this.Spellbook.Modules.${1:ModuleName} = (function() {
 
 	// -------------------------------------
 	//   Private Variables
@@ -47,6 +59,6 @@ var ${1:ModuleName} = (function() {
 //   Usage
 // -------------------------------------
 //
-// $1.init()
+// Spellbook.Modules.$1.init()
 //
 endsnippet
