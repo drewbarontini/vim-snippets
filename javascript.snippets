@@ -6,6 +6,14 @@ snippet cl "console.log" b
 console.log( ${1:'$2'} );$0
 endsnippet
 
+snippet ct "console.time" b
+console.time( '${1:timer}' );
+endsnippet
+
+snippet cte "console.timeEnd" b
+console.timeEnd( '${1:timer}' );
+endsnippet
+
 snippet db "Debugger" b
 debugger;
 endsnippet
