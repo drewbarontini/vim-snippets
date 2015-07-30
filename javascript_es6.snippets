@@ -1,0 +1,31 @@
+snippet ;$ "String Interpolation" options
+${ $1 }$0
+endsnippet
+
+snippet ;class "Class"
+class ${1:ClassName} {
+	${0:// ...}
+};
+endsnippet
+
+snippet ;expo "module.exports"
+module.exports = {
+	${0:// ...}
+};
+endsnippet
+
+snippet ;func "Function"
+${1:functionName}() {
+	${0:// ...}
+}
+endsnippet
+
+snippet ;imp "Import"
+import ${1:Object} from '${2:./path/to/file}';
+endsnippet
+
+snippet ;map "Map"
+${1:array}.map( ( ${2:item}, index ) => {
+	${0:// ...}
+});
+endsnippet
