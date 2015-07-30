@@ -1,35 +1,71 @@
-snippet rcc "React.createClass"
-var ${1:Component} = React.createClass({
-
-	render: function() {
-		return(
-			${2:// ...}
-		);
-	}
-
-});$0
-endsnippet
-
 snippet rcdm "React.componentDidMount"
-componentDidMount: function() {
+componentDidMount() {
 	${1://...}
 }$0
 endsnippet
 
+snippet rcom "React Component Scaffold"
+// *************************************
+//
+//   ${1:Component Name}
+//
+// *************************************
+
+// -------------------------------------
+//   Requires
+// -------------------------------------
+
+import React from 'react';
+// ...
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+export default class extends React.Component {
+
+	// ----- Constructor ----- //
+
+	constructor( props ) {
+		super( props );
+
+		this.state = {
+			// ...
+		};
+	}
+
+	// ----- Render ----- //
+
+	render() {
+		return(
+			// ...
+		);
+	}
+
+}
+
+// -------------------------------------
+//   Usage
+// -------------------------------------
+//
+// React.render( <$1 />, document.body );
+//
+endsnippet
+
 snippet rcwm "React.componentWillMount"
-componentWillMount: function() {
+componentWillMount() {
 	${1://...}
 }$0
 endsnippet
 
 snippet rgis "React.getInitialState"
-getInitialState: function() {
+getInitialState() {
 	${1://...}
 }$0
 endsnippet
 
 snippet rgdp "React.getDefaultProps"
-getDefaultProps: function() {
+getDefaultProps() {
 	${1://...}
 }$0
 endsnippet
