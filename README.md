@@ -7,9 +7,17 @@ These are all Vim snippets through [UltiSnips](https://github.com/SirVer/ultisni
 - All filetypes
 - Bash
 - CoffeeScript
+- CoffeeScript (Jasmine)
+- CoffeeScript (jQuery)
+- CoffeeScript ([Spellbook](https://github.com/spellbook/spellbook))
 - Haml
 - HTML
 - JavaScript
+- JavaScript (ES6)
+- JavaScript (Gulp)
+- JavaScript (jQuery)
+- JavaScript (React)
+- JavaScript ([Spellbook](https://github.com/spellbook/spellbook))
 - Markdown
 - PHP
 - Rails
@@ -19,3 +27,4 @@ These are all Vim snippets through [UltiSnips](https://github.com/SirVer/ultisni
 - Sass ([MVCSS](http://mvcss.io))
 - Text
 - Vim
+- Yaml
