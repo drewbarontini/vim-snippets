@@ -20,14 +20,23 @@ class $1
 end
 endsnippet
 
-snippet col "Comment - Heading"
-# ====================================
+snippet coh "Heading Comment"
+# *************************************
+#
 #   ${1:Title}
-# ====================================
+#   -> ${2:Description}
+#
+# *************************************$0
 endsnippet
 
-snippet cos "Comment - Long"
-# ----- ${1:Title} ----- #
+snippet col "Long Comment"
+# -------------------------------------
+#   ${1:Title}
+# -------------------------------------$0
+endsnippet
+
+snippet cos "Short Comment"
+# ----- ${1:Title} ----- #$0
 endsnippet
 
 snippet def "Method Definition"
