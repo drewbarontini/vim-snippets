@@ -95,6 +95,10 @@ ${1:name} : ${2:( $3 )} ->
 	${0:# body...}
 endsnippet
 
+snippet note "NOTE comment"
+# NOTE: $0
+endsnippet
+
 snippet req "Require" b
 ${1/^'?(\w+)'?$/\L$1\E/} = require( ${1:'${2:sys}'} )
 endsnippet
@@ -121,6 +125,10 @@ snippet swi "Switch when .. then" b
 switch ${1:object}
 	when ${2:condition}`!p snip.rv = " then " if t[3] else ""`${3:value}
 	else`!p snip.rv = " " if t[4] and not t[4].startswith("\n") else ""`${4:value}
+endsnippet
+
+snippet todo "TODO comment"
+# TODO${1:(${2})}: $0
 endsnippet
 
 snippet try "Try .. Catch" b
