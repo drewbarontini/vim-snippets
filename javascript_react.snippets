@@ -85,6 +85,14 @@ snippet rs "this.state"
 this.state.$0
 endsnippet
 
+snippet rcs "Stateless Component"
+const ${1:functionName} = ($2) => (
+	${0:// ...}
+);
+
+export default $1;
+endsnippet
+
 snippet rss "React.setState"
 this.setState( { $1 } );$0
 endsnippet
