@@ -22,16 +22,14 @@ import React from 'react';
 //   Base
 // -------------------------------------
 
-export default class ${1:ComponentName} extends React.Component {
+class ${1:ComponentName} extends React.Component {
 
 	// ----- Constructor ----- //
 
 	constructor( props ) {
 		super( props );
 
-		this.state = {
-			// ...
-		};
+		// ...
 	}
 
 	// ----- Render ----- //
@@ -44,12 +42,7 @@ export default class ${1:ComponentName} extends React.Component {
 
 }
 
-// -------------------------------------
-//   Usage
-// -------------------------------------
-//
-// React.render( <$1 />, document.body );
-//
+export default $1;
 endsnippet
 
 snippet rcwm "React.componentWillMount"
@@ -58,24 +51,12 @@ componentWillMount() {
 }$0
 endsnippet
 
-snippet rgis "React.getInitialState"
-getInitialState() {
-	${1://...}
-}$0
-endsnippet
-
-snippet rgdp "React.getDefaultProps"
-getDefaultProps() {
-	${1://...}
-}$0
-endsnippet
-
 snippet rp "this.props"
 this.props.$0
 endsnippet
 
-snippet rr "React.render"
-React.render(
+snippet rr "ReactDOM.render"
+ReactDOM.render(
 	${1:<Component />},
 	${2:document.getElementById( '' )}
 );
