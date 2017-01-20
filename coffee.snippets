@@ -9,7 +9,7 @@ snippet # "Interpolated Code" i
 endsnippet
 
 snippet bfun "Function (bound)" i
-`!p snip.rv = "( " if t[1] else ""`${1:args}`!p snip.rv = " ) " if t[1] else ""`=>`!p snip.rv = " " if t[2] and not t[2].startswith("\n") else ""`${2:expr}
+`!p snip.rv = "(" if t[1] else ""`${1:args}`!p snip.rv = ") " if t[1] else ""`=>`!p snip.rv = " " if t[2] and not t[2].startswith("\n") else ""`${2:expr}
 endsnippet
 
 snippet cc "console.clear()" b
@@ -23,7 +23,7 @@ endsnippet
 snippet cla "Class" b
 class ${1:ClassName}`!p snip.rv = " extends " if t[2] else ""`${2:Ancestor}
 
-	${3:constructor:`!p snip.rv = " ( " if t[4] else ""`${4:args}`!p snip.rv = " )" if t[4] else ""` ->
+	${3:constructor:`!p snip.rv = " (" if t[4] else ""`${4:args}`!p snip.rv = ")" if t[4] else ""` ->
 		${5:# ...}}
 	$0
 endsnippet
@@ -70,7 +70,7 @@ for ${1:name} in [ ${2:start}...${3:finish} ]`!p snip.rv = " by " if t[4] else "
 endsnippet
 
 snippet fun "Function" b
-${1:name} = `!p snip.rv = "( " if t[2] else ""`${2:args}`!p snip.rv = " ) " if t[2] else ""`->
+${1:name} = `!p snip.rv = "(" if t[2] else ""`${2:args}`!p snip.rv = ") " if t[2] else ""`->
 	${0:# ...}
 endsnippet
 
@@ -91,7 +91,7 @@ if ${1:condition} then ${2:value} else ${3:other}
 endsnippet
 
 snippet met "Method" b
-${1:name} : ${2:( $3 )} ->
+${1:name} : ${2:($3)} ->
 	${0:# ...}
 endsnippet
 
@@ -100,7 +100,7 @@ snippet note "NOTE comment"
 endsnippet
 
 snippet req "Require" b
-${1/^'?(\w+)'?$/\L$1\E/} = require( ${1:'${2:sys}'} )
+${1/^'?(\w+)'?$/\L$1\E/} = require(${1:'${2:sys}'})
 endsnippet
 
 snippet st "setTimeout"
@@ -110,7 +110,7 @@ setTimeout ->
 endsnippet
 
 snippet sti "setTimeout Inline"
-setTimeout( -> $1, $2 )
+setTimeout(-> $1, $2)
 endsnippet
 
 snippet sw "Switch" b

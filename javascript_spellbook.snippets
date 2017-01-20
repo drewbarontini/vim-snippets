@@ -1,6 +1,6 @@
 snippet icb "Inline Callback"
 if ${1:_settings}.on${2:Callback} != null {
-	$1.on$2( $1 );
+	$1.on$2($1);
 }
 endsnippet
 
@@ -29,7 +29,7 @@ var this.Spellbook.Modules.${1:ModuleName} = (function() {
 	//   Initialize
 	// -------------------------------------
 
-	var init = function( options ) {
+	var init = function(options) {
 		_settings = $.extend({
 			$${2:element} : $3
 		}, options );

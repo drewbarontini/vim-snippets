@@ -23,7 +23,7 @@ class @Spellbook.Classes.${1:ClassName}
 	#   Constructor
 	# -------------------------------------
 
-	constructor : ( @options ) -> @init()
+	constructor : (@options) -> @init()
 
 	# -------------------------------------
 	#   Initialize
@@ -63,7 +63,7 @@ snippet helper "Helper"
 #
 # *************************************
 
-@Spellbook.Helpers.${3:helperName} = ( item ) ->
+@Spellbook.Helpers.${3:helperName} = (item) ->
   ${4:# ...}
 
 # -------------------------------------
@@ -75,7 +75,7 @@ snippet helper "Helper"
 endsnippet
 
 snippet icb "Inline Callback"
-${1:_settings}.on${2:Callback}( $1 ) if $1.on$2?$0
+${1:_settings}.on${2:Callback}($1) if $1.on$2?$0
 endsnippet
 
 snippet module "Module"
@@ -102,7 +102,7 @@ snippet module "Module"
 	#   Initialize
 	# -------------------------------------
 
-	init = ( options ) ->
+	init = (options) ->
 		_settings = $.extend
 			$${2:element} : $3
 		, options
@@ -142,9 +142,9 @@ snippet service "Service"
 #
 # *************************************
 
-@Spellbook.Services.${3:serviceName} = ( options ) ->
+@Spellbook.Services.${3:serviceName} = (options) ->
   settings = $.extend
-    $element : $( '.js-element' )
+    $element : $('.js-element')
   , options
 
   ${4:# ...}
