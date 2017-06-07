@@ -11,3 +11,9 @@ snippet debug "debug"
 	color: red !important;
 }
 endsnippet
+
+snippet mq "Media query"
+@media screen and (${1:min-width}: $2) {
+	$0
+}
+endsnippet
