@@ -1,80 +1,21 @@
-snippet rcdm "React.componentDidMount"
+snippet rcdm "componentDidMount()"
 componentDidMount() {
 	${1://...}
-}$0
-endsnippet
-
-snippet rcom "React Component Scaffold"
-// *************************************
-//
-//   $1
-//
-// *************************************
-
-// -------------------------------------
-//   Requires
-// -------------------------------------
-
-import React from 'react';
-// ...
-
-// -------------------------------------
-//   Base
-// -------------------------------------
-
-class ${1:ComponentName} extends React.Component {
-
-	// ----- Constructor ----- //
-
-	constructor(props) {
-		super(props);
-
-		// ...
-	}
-
-	// ----- Render ----- //
-
-	render() {
-		return(
-			// ...
-		);
-	}
-
 }
-
-export default $1;
 endsnippet
 
-snippet rcwm "React.componentWillMount"
-componentWillMount() {
+snippet rd "render()"
+render() {
 	${1://...}
-}$0
+}
 endsnippet
 
-snippet rp "this.props"
-this.props.$0
-endsnippet
-
-snippet rr "ReactDOM.render"
-ReactDOM.render(
-	${1:<Component />},
-	${2:document.getElementById('' )});
-endsnippet
-
-snippet rs "this.state"
-this.state.$0
-endsnippet
-
-snippet rsc "Stateless Component"
-const ${1:functionName} = ($2) => (	${0:// ...});
-
-export default $1;
-endsnippet
-
-snippet rss "React.setState"
+snippet rss "setState()"
 this.setState({ $1 });$0
 endsnippet
 
 snippet rt "return()"
-return(	$0);
+return(
+	${1://...}
+);
 endsnippet

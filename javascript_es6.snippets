@@ -14,17 +14,29 @@ class ${1:ClassName} {
 };
 endsnippet
 
-snippet cfunc "Constant Function"
+snippet cf "Constant Function"
 const ${1:functionName} = ($2) => {
 	${0:// ...}
 };
 endsnippet
 
-snippet cfuncr "Constant Function Object Return"
+snippet cfr "Constant Function Object Return"
 const ${1:functionName} = ($2) => (	${0:// ...});
 endsnippet
 
-snippet func "Function"
+snippet cd "Destructuring Constant (Object)"
+const { $1 } = $2;
+endsnippet
+
+snippet cda "Destructuring Constant (Array)"
+const [ $1 ] = $2;
+endsnippet
+
+snippet exd "export default"
+export default $1;$0
+endsnippet
+
+snippet fd "Function"
 ${1:functionName}($2) {
 	${0:// ...}
 }
